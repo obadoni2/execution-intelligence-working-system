@@ -1,0 +1,96 @@
+services:
+  eth-monitor-dashboard:
+    build: .
+    container_name: eth_congestion_monitor_dashboard
+    command: streamlit run dashboard.py --server.address=0.0.0.0 --server.port=8501
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - SUPT_API_URL=http://eth-monitor-api:8000
+    volumes:
+      - ./app:/app/app
+      - ./pages:/app/pages
+      - ./equities:/app/equities
+      - ./planetary:/app/planetary
+      - ./live:/app/live
+      - ./supt_multichain.py:/app/supt_multichain.py
+      - ./data:/app/data
+      - ./reports:/app/reports
+    depends_on:
+      - eth-monitor-api
+    restart: unless-stopped
+
+  eth-monitor-api:
+    build: .
+    container_name: eth_congestion_monitor_api
+    command: python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./app:/app/app
+      - ./equities:/app/equities
+      - ./planetary:/app/planetary
+      - ./live:/app/live
+      - ./data:/app/data
+      - ./reports:/app/reports
+    restart: unless-stopped
+
+  eth-monitor-agent:
+    build: .
+    container_name: eth_regime_agent
+    command: python scripts/run_agent.py
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - MONITOR_API_URL=http://eth-monitor-api:8000/v1/current
+    volumes:
+      - ./app:/app/app
+      - ./scripts:/app/scripts
+      - ./data:/app/data
+      - ./reports:/app/reports
+    depends_on:
+      - eth-monitor-api
+    restart: unless-stopped
+
+  eth-monitor-counterfactual:
+    build: .
+    container_name: eth_counterfactual_logger
+    command: python scripts/run_counterfactual_logger.py
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - MONITOR_API_URL=http://eth-monitor-api:8000/v1/current
+    volumes:
+      - ./app:/app/app
+      - ./scripts:/app/scripts
+      - ./data:/app/data
+      - ./reports:/app/reports
+    depends_on:
+      - eth-monitor-api
+    restart: unless-stopped
+
+  eth-monitor-paper:
+    build: .
+    container_name: eth_paper_execution_logger
+    command: python scripts/run_paper_execution.py
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./app:/app/app
+      - ./scripts:/app/scripts
+      - ./data:/app/data
+      - ./reports:/app/reports
+    depends_on:
+      - eth-monitor-counterfactual
+    restart: unless-stopped

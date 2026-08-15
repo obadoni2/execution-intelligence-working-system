@@ -1,0 +1,4 @@
+environment_bucket,risk_decision,samples,policy_better,baseline_better,roughly_equal,policy_better_rate,baseline_better_rate,net_policy_advantage,loss_avoided_proxy,opportunity_cost_proxy,robustness_score
+LOW_DEPTH_ENV,REDUCE_SIZE,1,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0
+NORMAL_ENV,REDUCE_SIZE,1,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0
+NORMAL_ENV,ALLOW,8,0,0,8,0.0,0.0,0.0,0.0,0.0,0.0

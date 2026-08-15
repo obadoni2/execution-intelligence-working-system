@@ -1,0 +1,2 @@
+policy_status,recalibration_recommendation,drift_score,total_events,completed_outcomes,symbol_coverage,regime_coverage,sample_score,completion_score,symbol_score,regime_score,drift_consistency_score,evidence_confidence_score,evidence_confidence_label,learning_status,interpretation
+INSUFFICIENT_DATA,COLLECT_MORE_DATA,0.0,10,10,10,2,0.1,1.0,1.0,0.4,1.0,0.595,MEDIUM_CONFIDENCE,INSUFFICIENT_EVIDENCE,Confidence measures how strongly the system should trust its current policy-health conclusion. Low confidence means collect more evidence before changing policy.

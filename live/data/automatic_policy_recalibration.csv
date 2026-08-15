@@ -1,0 +1,4 @@
+environment_bucket,risk_decision,samples,policy_trust_label,policy_trust_score,drift_score,robustness_score,policy_better_rate,baseline_better_rate,current_size_multiplier,proposed_size_multiplier,recalibration_status,recommended_update,reason,deployment_mode
+LOW_DEPTH_ENV,REDUCE_SIZE,1,UNTRUSTED,0.6045,0.0,0.0,0.0,0.0,0.25,0.25,INSUFFICIENT_DATA,NO_CHANGE,Not enough samples to justify recalibration.,RECOMMENDATION_ONLY
+NORMAL_ENV,REDUCE_SIZE,1,UNTRUSTED,0.6045,0.0,0.0,0.0,0.0,0.25,0.25,INSUFFICIENT_DATA,NO_CHANGE,Not enough samples to justify recalibration.,RECOMMENDATION_ONLY
+NORMAL_ENV,ALLOW,8,UNTRUSTED,0.6045,0.0,0.0,0.0,0.0,1.0,1.0,INSUFFICIENT_DATA,NO_CHANGE,Not enough samples to justify recalibration.,RECOMMENDATION_ONLY

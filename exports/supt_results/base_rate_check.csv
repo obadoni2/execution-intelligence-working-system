@@ -1,0 +1,2 @@
+horizon_blocks,total_windows,pause_bad,pause_good,execute_bad,execute_good,pause_total,execute_total,pause_rate,execute_rate,bad_rate_when_paused,bad_rate_when_executed,discrimination_gap,agent_accuracy,pause_precision,bad_window_recall,unnecessary_pause_rate,missed_bad_rate,verdict
+10,506,42,0,59,405,42,464,0.08300395256916997,0.9169960474308301,1.0,0.1271551724137931,0.8728448275862069,0.883399209486166,1.0,0.4158415841584158,0.0,0.1271551724137931,strong_discrimination

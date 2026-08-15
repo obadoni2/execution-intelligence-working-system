@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/*.csv
+equities/data/*.csv
+equities/data/provider/*.csv
+equities/data/validation/*.csv
+planetary/data/*.csv
+reports/*.csv

@@ -1,0 +1,19 @@
+{
+  "schema_version": "supt.spy_execution_guidance.v1",
+  "production_connected": false,
+  "experimental": true,
+  "symbol": "SPY",
+  "timestamp": "2026-05-10T09:49:59+00:00",
+  "regime": "COHERENCE",
+  "composite_d_ij": 0.370999,
+  "spread_d_ij": 0.286682,
+  "depth_d_ij": 0.606799,
+  "quote_trade_ratio_d_ij": 0.219517,
+  "divergence": 0.387282,
+  "risk_state": "NORMAL",
+  "recommended_action": "EXECUTE_FULL",
+  "can_execute_now": true,
+  "max_position_multiplier": 1.0,
+  "operator_guidance": "SPY microstructure appears stable. Normal execution is acceptable.",
+  "note": "Experimental equities substrate layer only. Not connected to Ethereum production decision API."
+}

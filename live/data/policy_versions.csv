@@ -1,0 +1,2 @@
+created_at,policy_id,policy_version,policy_status,deployment_stage,trust_label,trust_score,total_events,recommended_updates,rollback_rule,approval_required,deployment_mode,notes
+2026-06-16T00:09:30.301214+00:00,POLICY_a00d1fa1c8d98fe2,v1.0-candidate,CANDIDATE,DRAFT,UNTRUSTED,0.6045,10,0,ROLLBACK_REQUIRED_IF_DEPLOYED,TRUE,SAFE_REGISTRY_ONLY,"This policy version is registered for tracking only. No live deployment should happen without manual review, paper validation, and rollback readiness."

@@ -1,0 +1,2 @@
+timestamp_utc,exchange,symbol,best_bid,best_ask,bid_size,ask_size,spread,spread_bps,top_depth,trade_count_100,buy_trades_100,sell_trades_100,trade_volume_100,ticker_last,ticker_volume,candle_open,candle_high,candle_low,candle_close,candle_volume,provider_data_hash
+2026-05-24T17:29:16.783537+00:00,gateio,ETH/USDT,2102.04,2102.05,5.2283,5.7056,0.010000000000218279,0.04757272,10.9339,100,24,76,28.375799999999995,2102.05,145746.5336,2102.05,2102.3,2102.05,2102.3,1.2481,1942586585ab1f831dd58852fcad15182cda6d0c295711b911261a095d17c98f

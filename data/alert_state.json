@@ -1,0 +1,11 @@
+{
+  "live": {
+    "is_active": false,
+    "alert_id": null,
+    "started_at": null,
+    "started_block": null,
+    "last_dij": null,
+    "last_regime": null,
+    "last_message": null
+  }
+}

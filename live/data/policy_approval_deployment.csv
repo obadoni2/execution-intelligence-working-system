@@ -1,0 +1,2 @@
+policy_id,policy_version,deployment_stage,capital_percentage,trust_label,trust_score,total_events,drift_score,rollback_rule,approval_status
+POLICY_a00d1fa1c8d98fe2,v1.0-candidate,DRAFT,0,UNTRUSTED,0.6045,10,0.0,NOT_DEPLOYED,PENDING_REVIEW

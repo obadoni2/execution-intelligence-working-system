@@ -1,0 +1,9 @@
+numpy
+pandas
+python-dotenv
+streamlit
+streamlit-autorefresh
+web3
+requests
+fastapi
+uvicorn

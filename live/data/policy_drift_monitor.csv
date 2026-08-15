@@ -1,0 +1,2 @@
+total_events,policy_better,baseline_better,roughly_equal,policy_better_rate,baseline_better_rate,roughly_equal_rate,net_policy_value,avg_policy_value,loss_avoided_proxy,opportunity_cost_proxy,regime_groups,weak_regime_groups,zero_signal_regime_groups,policy_status,drift_score,recalibration_recommendation,reason
+10,0,0,10,0.0,0.0,1.0,0.0,0.0,0.0,0.0,3,0,3,INSUFFICIENT_DATA,0.0,COLLECT_MORE_DATA,Not enough completed counterfactual events to evaluate drift reliably.
